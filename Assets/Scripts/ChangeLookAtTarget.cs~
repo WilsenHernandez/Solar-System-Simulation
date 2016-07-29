@@ -5,7 +5,7 @@ public class ChangeLookAtTarget : MonoBehaviour
 {
 
     public GameObject target; // the target that the camera should look at
-    static public int fov = 60;
+    static public int fov = 45;
 
     void Start()
     {
@@ -21,6 +21,6 @@ public class ChangeLookAtTarget : MonoBehaviour
     {
         // change the target of the LookAtTarget script to be this gameobject.
         LookAtTarget.target = target;
-        Camera.main.fieldOfView = fov*target.transform.localScale.x * 0.75f;
+        Camera.main.fieldOfView = fov*target.transform.localScale.x;
     }
 }
